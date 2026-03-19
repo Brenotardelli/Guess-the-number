@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: rgb(41, 40, 40);
+        color: rgb(255, 255, 255);
+        display: flex;
+        height: 100dvh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 12px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #restartBtn {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Guess the Number</h1>
+
+    <form id="form">
+      <label for="number">Enter a number</label>
+      <input type="number" min="1" max="100" name="number" id="number" required autofocus />
+      <input type="submit" value="Guess" />
+    </form>
+
+    <div>
+      <h3 id="erros"></h3>
+      <h3 id="chances"></h3>
+      <p id="dica">Hint: it's a number between 1 and 100. Use binary search strategy: always guess the middle value!</p>
+      <button id="restartBtn">Restart Game</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
